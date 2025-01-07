@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2235.64 839.94">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: #414042;
+      }
+
+      .cls-3 {
+        font-size: 224.22px;
+        letter-spacing: -.05em;
+      }
+
+      .cls-3, .cls-4 {
+        font-family: MontserratRoman-Regular, Montserrat;
+        font-variation-settings: 'wght' 400;
+      }
+
+      .cls-5, .cls-6, .cls-7 {
+        font-family: MontserratRoman-ExtraBold, Montserrat;
+        font-variation-settings: 'wght' 800;
+        font-weight: 700;
+      }
+
+      .cls-5, .cls-4 {
+        font-size: 350.65px;
+        letter-spacing: -.05em;
+      }
+
+      .cls-6 {
+        letter-spacing: -.05em;
+      }
+
+      .cls-6, .cls-7 {
+        fill: #fff;
+        font-size: 204.02px;
+      }
+
+      .cls-7 {
+        letter-spacing: -.04em;
+      }
+
+      .cls-8 {
+        fill: #39b24a;
+      }
+
+      .cls-8, .cls-2 {
+        stroke-width: 0px;
+      }
+    </style>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <g>
+      <g>
+        <polygon class="cls-8" points="773.38 820.26 564.14 820.26 258.69 424.11 388.35 320.89 773.38 820.26"/>
+        <polygon class="cls-8" points="801.93 12.34 386.89 528.96 259.29 423.13 589.3 12.34 801.93 12.34"/>
+      </g>
+      <rect class="cls-2" x="0" y="12.85" width="215.31" height="215.31"/>
+      <rect class="cls-2" x="0" y="308.75" width="215.31" height="215.31"/>
+      <rect class="cls-2" y="604.65" width="215.31" height="215.31"/>
+      <text class="cls-7" transform="translate(26.04 197.97)"><tspan x="0" y="0">K</tspan></text>
+      <text class="cls-6" transform="translate(21.82 490.89)"><tspan x="0" y="0">N</tspan></text>
+      <text class="cls-7" transform="translate(10.03 787.1)"><tspan x="0" y="0">M</tspan></text>
+      <text class="cls-1" transform="translate(890.91 298.05)"><tspan class="cls-4"><tspan x="0" y="0">KNM</tspan></tspan><tspan class="cls-5"><tspan x="0" y="276.57">DESIGN</tspan></tspan><tspan class="cls-3"><tspan x="0" y="479.06">GROUP LTD.</tspan></tspan></text>
+    </g>
+  </g>
+</svg>

@@ -780,3 +780,4 @@ chatButton.addEventListener('click', () => {
 closeButton.addEventListener('click', () => {
   chatBox.style.display = 'none';
 });
+

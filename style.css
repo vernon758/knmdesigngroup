@@ -9677,7 +9677,7 @@ ul.style-default li:last-child, ol.style-default li:last-child {
 #back-to-top.show {
   opacity: 1;
   visibility: visible;
-  bottom: 40px;
+  bottom: 100px;
 }
 #back-to-top i {
   display: block;
@@ -10294,4 +10294,7 @@ ul.style-default li:last-child, ol.style-default li:last-child {
   border-radius: 50%;  /* Circular shape */
   margin-right: 10px;  /* Space between the image and title */
 }
+
+
+
 

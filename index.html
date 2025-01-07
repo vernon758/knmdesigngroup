@@ -78,6 +78,109 @@
     <!-- REVOLUTION NAVIGATION STYLE -->
     <link rel="stylesheet" type="text/css" href="plugins/revolution/revolution/css/navigation.css">
 </head>
+<style>
+    /* Fullscreen overlay */
+    .preload-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #39b24a;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      z-index: 9999;
+    }
+
+    /* Blueprint Grid Background */
+    .grid-background {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: url('https://www.transparenttextures.com/patterns/blueprint.png') repeat;
+      animation: gridAnimation 2s linear infinite;
+    }
+
+    /* Grid animation for a moving blueprint effect */
+    @keyframes gridAnimation {
+      0% { background-position: 0 0; }
+      100% { background-position: -100% -100%; }
+    }
+
+   
+  
+
+    /* Preload Text */
+    .preload-text {
+      font-size: 24px;
+      font-family: 'Arial', sans-serif;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      text-align: center;
+      animation: fadeInText 5.5s ease-in-out;
+    }
+
+    /* Text Fade-In Effect */
+    @keyframes fadeInText {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
+    /* Building animation lines */
+    .line {
+      position: absolute;
+      width: 2px;
+      height: 50px;
+      background-color: #fff;
+      animation: buildingLine 5.5s ease-in-out infinite;
+    }
+
+    /* Animation for building lines to appear */
+    @keyframes buildingLine {
+      0% { height: 0; opacity: 0; }
+      50% { height: 50px; opacity: 1; }
+      100% { height: 0; opacity: 0; }
+    }
+
+    .line:nth-child(1) { top: 30%; left: 20%; }
+    .line:nth-child(2) { top: 40%; left: 40%; }
+    .line:nth-child(3) { top: 50%; left: 60%; }
+    .line:nth-child(4) { top: 60%; left: 80%; }
+
+    /* Hide overlay after load */
+    .hidden {
+      opacity: 0;
+    }
+
+  </style>
+<body>
+
+  <!-- Preload Screen -->
+  <div class="preload-overlay">
+    <div class="grid-background"></div>
+    <div class="preload-animation"></div>
+    <div class="preload-text">Building your dream...</div>
+    
+    <!-- Animated Building Lines -->
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+  </div>
+
+ 
+
+  <script>
+    // Hide the preload screen after 5 seconds
+    window.onload = function() {
+      setTimeout(function() {
+        document.querySelector('.preload-overlay').classList.add('hidden');
+      }, 100); // 5 seconds delay before hiding
+    }
+  </script>
 
 <body>
     <div id="page" class="site">
@@ -100,7 +203,6 @@
                                         <ul class="menu">
                                             <li><a href="index.html">Home</a></li>
                                                     <li><a href="what-we-do.html">What We Do</a></li>
-                                                    <li><a href="our-services.html">Our Services</a></li>
                                             <li><a href="contact-us.html">Contact Us</a></li>
                                         </ul>
                                     </nav>
@@ -111,7 +213,7 @@
 
                                         <div class="octf-search octf-cta-header">
                                             <div class="ot-button">
-                                                <a href="portfolio-masonry.html" class="octf-btn  border-hover-dark">Get A Quote</a>
+                                                <a href= "wa.me/1758" target="blank" class="octf-btn  border-hover-dark">Get A Quote</a>
                                             </div>
                                         </div>
 
@@ -146,7 +248,7 @@
 
             <!-- Right Button - Modified classes -->
             <div class="octf-col right-side">
-                <a href="portfolio-masonry.html" class="mobile-quote-btn">Get A Quote</a>
+                <a href="wa.me/1758" target="_blank" class="mobile-quote-btn">Get A Quote</a>
             </div>
         </div>
     </div>
@@ -160,7 +262,6 @@
                 <ul id="menu-main-menu" class="mobile_mainmenu none-style">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="what-we-do.html">What We Do</a></li>
-                    <li><a href="our-services.html">Our Services</a></li>
                     <li><a href="contact-us.html">Contact Us</a></li>                                                    
                 </ul>
             </div>
@@ -216,7 +317,7 @@
                         <div class="col-xl-7 col-lg-12">
                             <h2>We Create Powerful <br> & Simple Architecture Solutions</h2>
                                 <div class="ot-button">
-                                    <a href="portfolio-masonry.html" class="octf-btn hero-btn border-hover-dark" >Get A Quote</a>
+                                    <a href="wa.me/1758" target="_blank" class="octf-btn hero-btn border-hover-dark" >Get A Quote</a>
                                 </div>
                             <div class="banner-desc-4">
                                 <p>we will help you to build a dream</p>
@@ -247,7 +348,7 @@
             
 </div>
 <!-- #page -->
-
+<a id="back-to-top" href="#" class="show"><i class="ot-flaticon-left-arrow"></i></a>
 
 <div id="live-chat">
     <div id="chat-button">
@@ -269,15 +370,93 @@
         </div>
       </div>
       <div class="chat-footer">
-        <button id="chat-now">Start Chat</button>
+        <a href="wa.me/1758" target="_blank">
+        <button id="chat-now">Start Chat</button></a>
       </div>
     </div>
   </div>
 
+<!------Get in touch-------->
 
+<section id="contact" class="contact-page">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 align-self-center mb-5 mb-lg-0">
+                <div class="contact-left mr-xl-70">
+                    <h2>Get in Touch</h2>
+                    <p class="font14">Your email address will not be published. Required fields are marked *</p>
+                    <form action="contact.php" method="post" class="wpcf7">
+                        <div class="main-form">
+                            <p>
+                                <input type="text" name="name" value="" size="40" class="" aria-invalid="false" placeholder="Your Name *" required>
+                            </p>
+                            <p>
+                                <input type="email" name="email" value="" size="40" class="" aria-invalid="false" placeholder="Your Email *" required>
+                            </p>
+                            <p>
+                                <textarea name="message" cols="40" rows="10" class="" aria-invalid="false" placeholder="Message..." required></textarea>
+                            </p>
+                            <p><button type="submit" class="octf-btn">Send Message</button></p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="contact-right">
+                    <div class="ot-heading">
+                        <span>[ our contact details ]</span>
+                        <h2 class="main-heading">Let's Start a Project</h2>
+                    </div>
+                    <p>Give us a call or drop by anytime, we endeavour to answer all enquiries within 24 hours on business days. We will be happy to answer your questions.</p>
+                    <div class="contact-info">
+                        <i class="ot-flaticon-place"></i>
+                        <div class="info-text">
+                            <h6>OUR ADDRESS:</h6>
+                            <p>411 University St, Seattle, USA</p>
+                        </div>
+                    </div>
+                    <div class="contact-info">
+                        <i class="ot-flaticon-mail"></i>
+                        <div class="info-text">
+                            <h6>OUR MAILBOX:</h6>
+                            <p><a href="mailto:theratio_interior@mail.com">theratio_interior@mail.com</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-info">
+                        <i class="ot-flaticon-phone-call"></i>
+                        <div class="info-text">
+                            <h6>OUR PHONE:</h6>
+                            <p><a href="tel:1800456789123">+1 800 456 789 123</a></p>
+                        </div>
+                    </div>
+                    <div class="list-social">
+                        <ul>
+                            </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
+<!---------Footer-------->
 
-<a id="back-to-top" href="#" class="show"><i class="ot-flaticon-left-arrow"></i></a>
+<div class="footer-bottom">
+    <div class="container">
+        <div class=""><center>
+                <p>Copyright © <span id="currentYear"></span> KNM Design Group ltd. by <a class="text-light" href="https://igraphixmktg.com/" target="_blank">iGraphix Marketing & Co.</a>. All Rights Reserved.</p>
+            </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+     var currentYear = new Date().getFullYear();
+     document.getElementById('currentYear').textContent = currentYear;
+    });
+    </script>
         <!-- jQuery -->
     <script src="js/jquery.min.js"></script>
     <script src="js/mousewheel.min.js"></script>

@@ -78,109 +78,6 @@
     <!-- REVOLUTION NAVIGATION STYLE -->
     <link rel="stylesheet" type="text/css" href="plugins/revolution/revolution/css/navigation.css">
 </head>
-<style>
-    /* Fullscreen overlay */
-    .preload-overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: #39b24a;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      overflow: hidden;
-      z-index: 9999;
-    }
-
-    /* Blueprint Grid Background */
-    .grid-background {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background: url('https://www.transparenttextures.com/patterns/blueprint.png') repeat;
-      animation: gridAnimation 2s linear infinite;
-    }
-
-    /* Grid animation for a moving blueprint effect */
-    @keyframes gridAnimation {
-      0% { background-position: 0 0; }
-      100% { background-position: -100% -100%; }
-    }
-
-   
-  
-
-    /* Preload Text */
-    .preload-text {
-      font-size: 24px;
-      font-family: 'Arial', sans-serif;
-      color: #fff;
-      text-transform: uppercase;
-      letter-spacing: 3px;
-      text-align: center;
-      animation: fadeInText 5.5s ease-in-out;
-    }
-
-    /* Text Fade-In Effect */
-    @keyframes fadeInText {
-      0% { opacity: 0; }
-      100% { opacity: 1; }
-    }
-
-    /* Building animation lines */
-    .line {
-      position: absolute;
-      width: 2px;
-      height: 50px;
-      background-color: #fff;
-      animation: buildingLine 5.5s ease-in-out infinite;
-    }
-
-    /* Animation for building lines to appear */
-    @keyframes buildingLine {
-      0% { height: 0; opacity: 0; }
-      50% { height: 50px; opacity: 1; }
-      100% { height: 0; opacity: 0; }
-    }
-
-    .line:nth-child(1) { top: 30%; left: 20%; }
-    .line:nth-child(2) { top: 40%; left: 40%; }
-    .line:nth-child(3) { top: 50%; left: 60%; }
-    .line:nth-child(4) { top: 60%; left: 80%; }
-
-    /* Hide overlay after load */
-    .hidden {
-      opacity: 0;
-    }
-
-  </style>
-<body>
-
-  <!-- Preload Screen -->
-  <div class="preload-overlay">
-    <div class="grid-background"></div>
-    <div class="preload-animation"></div>
-    <div class="preload-text">Building your dream...</div>
-    
-    <!-- Animated Building Lines -->
-    <div class="line"></div>
-    <div class="line"></div>
-    <div class="line"></div>
-    <div class="line"></div>
-  </div>
-
- 
-
-  <script>
-    // Hide the preload screen after 5 seconds
-    window.onload = function() {
-      setTimeout(function() {
-        document.querySelector('.preload-overlay').classList.add('hidden');
-      }, 100); // 5 seconds delay before hiding
-    }
-  </script>
 
 <body>
     <div id="page" class="site">
@@ -201,7 +98,8 @@
                                 <div class="octf-col menu-col">
                                     <nav id="site-navigation" class="main-navigation nav-text-dark">
                                         <ul class="menu">
-                                            <li><a href="index.html">Home</a></li>
+                                            <li class="current-menu-item">
+                                                <a href="index.html">Home</a></li>
                                                     <li><a href="what-we-do.html">What We Do</a></li>
                                             <li><a href="contact-us.html">Contact Us</a></li>
                                         </ul>
@@ -213,7 +111,7 @@
 
                                         <div class="octf-search octf-cta-header">
                                             <div class="ot-button">
-                                                <a href= "wa.me/1758" target="blank" class="octf-btn  border-hover-dark">Get A Quote</a>
+                                                <a href= "https://api.whatsapp.com/send/?phone=17584863331&text&type=phone_number&app_absent=0" target="blank" class="octf-btn  border-hover-dark">Get A Quote</a>
                                             </div>
                                         </div>
 
@@ -248,7 +146,7 @@
 
             <!-- Right Button - Modified classes -->
             <div class="octf-col right-side">
-                <a href="wa.me/1758" target="_blank" class="mobile-quote-btn">Get A Quote</a>
+                <a href="https://api.whatsapp.com/send/?phone=17584863331&text&type=phone_number&app_absent=0" target="_blank" class="mobile-quote-btn">Get A Quote</a>
             </div>
         </div>
     </div>
@@ -268,6 +166,9 @@
         </div>
     </div>
 </div>
+
+
+<!----------->
 
 <style>
 /* Additional CSS for the new button structure */
@@ -309,44 +210,6 @@
         font-size: 12px;
     }
 }</style>
-
-        <div id="content" class="site-content">
-            <section class="banner-4">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xl-7 col-lg-12">
-                            <h2>We Create Powerful <br> & Simple Architecture Solutions</h2>
-                                <div class="ot-button">
-                                    <a href="wa.me/1758" target="_blank" class="octf-btn hero-btn border-hover-dark" >Get A Quote</a>
-                                </div>
-                            <div class="banner-desc-4">
-                                <p>we will help you to build a dream</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="feature-4">
-                <div class="container">
-                    <div class="feature-wrap">
-                        <div class="feature-item mb-4 mb-lg-0">
-                            <h6 class="number">01.</h6>
-                            <p>Commercial Architecture & Design</p>
-                        </div>
-                        <div class="feature-item mb-4 mb-lg-0">
-                            <h6 class="number">02.</h6>
-                            <p>Successul Architecture Concepts & Ideas</p>
-                        </div>
-                        <div class="feature-item">
-                            <h6 style="color: #fff;" class="number">03.</h6>
-                            <p>Sustainability. Utility. <br> Visibility.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            
-</div>
 <!-- #page -->
 <a id="back-to-top" href="#" class="show"><i class="ot-flaticon-left-arrow"></i></a>
 
@@ -370,13 +233,107 @@
         </div>
       </div>
       <div class="chat-footer">
-        <a href="wa.me/1758" target="_blank">
+        <a href="https://api.whatsapp.com/send/?phone=17584863331&text&type=phone_number&app_absent=0" target="_blank">
         <button id="chat-now">Start Chat</button></a>
       </div>
     </div>
   </div>
 
-<!------Get in touch-------->
+
+
+        <div id="content" class="site-content">
+    
+
+            <section class="banner-4">
+                <video autoplay muted loop>
+                    <source src="main.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="content-wrapper">
+                    <h2>We Create Powerful<br>
+                        & Simple Architecture <br>Solutions</h2>
+                    <div class="ot-button">
+                        <a href="https://api.whatsapp.com/send/?phone=17584863331&text&type=phone_number&app_absent=0" 
+                           target="_blank" 
+                           class="octf-btn hero-btn border-hover-dark">Get A Quote</a>
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="feature-4">
+                <div class="container">
+                    <div class="feature-wrap">
+                        <div class="feature-item mb-4 mb-lg-0">
+                            <h6 class="number">01.</h6>
+                            <p>Commercial Architecture & Design</p>
+                        </div>
+                        <div class="feature-item mb-4 mb-lg-0">
+                            <h6 class="number">02.</h6>
+                            <p>Successul Architecture Concepts & Ideas</p>
+                        </div>
+                        <div class="feature-item">
+                            <h6 style="color: #fff;" class="number">03.</h6>
+                            <p>Sustainability. Utility. <br> Visibility.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+</div>
+
+
+<!------About us -->
+
+<section>
+    <div class="space-10"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-12 mb-5 mb-lg-0">
+                <div class="benefits-desc-classic">
+                    <div class="ot-heading">
+                        <span>[ our benefits ]</span>
+                        <h2 class="main-heading">“Less Is More ”</h2>
+                    </div>
+                    <div class="ot-button1">
+                        <a href="portfolio-masonry.html" class="octf-btn octf-btn-dark border-hover-light" >View Our Services</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-12">
+                <h6 class="title-s2">About Us</h6>
+                <p>KNM DESIGN GROUP LTD is a full-service, forward-thinking design consultancy firm, specializing in residential and hospitality design along with a variety of commercial, institutional, recreational and Industrial projects. Our designs transcend mere aesthetics to embody the deeper connections between people, place, and purpose. </p>
+                <p class="pb-0">Since our founding in 2007, we have embraced the profound interconnectedness of architecture, interior design, landscape, and urban design, believing that these disciplines are inextricably linked in shaping meaningful human experiences!</p>
+            </div>
+            <div class="col-lg-4 col-md-12">
+                <h6 class="title-s2">our approach</h6>
+                <ul class="style-default unstyle">
+                    <li>
+                        <span>We are dedicated to delivering an exceptional client experience from design to construction, 
+                            with a personalized approach tailored to each client's vision and needs. <br><br> Our innovative thinking 
+                            and commitment to excellence foster creativity and integrity in every project. We embrace our social 
+                            responsibility to craft environmentally resonant projects and collaborate closely with contractors and 
+                            engineers for fluid design and quality delivery.
+                            </span>
+                    </li>
+                   
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="space-10"></div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+<!------Get in touch
 
 <section id="contact" class="contact-page">
     <div class="container">
@@ -437,7 +394,7 @@
             </div>
         </div>
     </div>
-</section>
+</section>-------->
 
 <!---------Footer-------->
 

@@ -2066,8 +2066,10 @@ a:hover, a:active {
     height: 100%;
   }
 }
+
+
 /*--------------------------------------------------------------
-## Header Mobile
+# Header Mobile
 --------------------------------------------------------------*/
 .header_mobile {
   display: none;
@@ -8512,20 +8514,63 @@ ul.style-default li:last-child, ol.style-default li:last-child {
     max-width: 500px;
     margin: 0 auto;
 }
+
+
 .banner-4 {
-    background-image: url(images/1920x808.png);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding: 180px 0 270px 0;
+  position: relative;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
+
+.banner-4 video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2; /* Send video to the back */
+}
+
+.banner-4::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: /* rgba(255, 255, 255, 0.7); White overlay with transparency */
+  z-index: -1; /* Layer the overlay above the video but behind content */
+}
+
+.banner-4 .content-wrapper {
+  text-align: center;
+  z-index: 1; /* Ensure content stays above overlay */
+}
+
 .banner-4 h2 {
-    font-family: "Titillium Web",Sans-serif;
-    font-size: 72px;
-    font-weight: 300;
-    line-height: 80px;
-    margin-bottom: 40px;
+  font-size: 4.5rem;
+  margin-bottom: 20px;
+  color: #fff; /* Darker text for contrast */
 }
+
+.banner-4 .ot-button .octf-btn {
+  color: #fff;
+  background-color: #000;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.banner-4 .ot-button .octf-btn {
+  color: #fff;
+  background-color: #000;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
 .video-popup.s-dark .btn-play {
     color: #FFF;
     background: #1A1A1A;
@@ -9502,11 +9547,11 @@ ul.style-default li:last-child, ol.style-default li:last-child {
   }
 }
 @media (max-width: 480px) {
-  .feature-wrap .feature-item {
+ /* .feature-wrap .feature-item {
     -ms-flex: 0 0 50%;
     flex: 0 0 50%;
     max-width: 50%;
-  }
+  }*/
   .feature-item h6 {
     padding: 0;
   }
@@ -10295,6 +10340,32 @@ ul.style-default li:last-child, ol.style-default li:last-child {
   margin-right: 10px;  /* Space between the image and title */
 }
 
+@media (max-width: 450px) {
 
+  .banner-4 h2{
+    margin-top: -50% !important;
+  }
+
+  .feature-wrap h6{
+    font-size: 0.8em;
+  }
+
+  .feature-wrap p{
+    font-size: 0.7rem;
+  }
+}
+
+
+
+@media (max-width: 480px) {
+  .banner-4 h2{
+    margin-top: -0% !important;
+
+  }
+
+  .feature-4{
+    display: none !important;
+  }
+}
 
 

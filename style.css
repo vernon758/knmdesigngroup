@@ -2144,7 +2144,7 @@ a:hover, a:active {
     color: #fff;
     text-decoration: none;
     font-size: 14px;
-    background: transparent;
+    background: #2d8c3b;
     border: 1px solid #fff;
     transition: all 0.3s ease;
     white-space: nowrap;

@@ -2112,7 +2112,6 @@ a:hover, a:active {
   }
 
   .header_mobile .mlogo_wrapper img {
-    margin-left: 20px;
     width: 100%;
   }
 
@@ -7080,7 +7079,7 @@ section {
 .contact-right {
     padding-left: 75px;
     padding-right: 40px;
-    background-image: url('https://via.placeholder.com/510x680.png');
+    background-image: url('/images/contact-right.png');
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -7176,40 +7175,40 @@ section {
     margin-bottom: 20px;
 }
 .icon-bg-1 {
-    background-image: url(https://via.placeholder.com/715x628.png);
+    background-image: url(images/715x628.png);
 }
 .icon-bg-2 {
-    background-image: url(https://via.placeholder.com/715x628.png);
+    background-image: url(images/715x628.png);
 }
 .icon-bg-3 {
-    background-image: url(https://via.placeholder.com/715x628.png);
+    background-image: url(images/715x628.png);
 }
 .icon-bg-4 {
-    background-image: url(https://via.placeholder.com/715x628.png);
+    background-image: url(images/715x628.png);
 }
 .icon-bg-5{
-    background-image: url(https://via.placeholder.com/715x628.png);
+    background-image: url(images/715x628.png);
 }
 .icon-bg-6 {
-    background-image: url(https://via.placeholder.com/715x628.png);
+    background-image: url(images/715x628.png);
 }
 .icon-bg-1:hover {
-    background-image: url(https://via.placeholder.com/715x628.png);
+    background-image: url(images/715x628.png);
 }
 .icon-bg-2:hover {
-    background-image: url(https://via.placeholder.com/715x628.png);
+    background-image: url(images/715x628.png);
 }
 .icon-bg-3:hover {
-    background-image: url(https://via.placeholder.com/715x628.png);
+    background-image: url(images/715x628.png);
 }
 .icon-bg-4:hover {
-    background-image: url(https://via.placeholder.com/715x628.png);
+    background-image: url(images/715x628.png);
 }
 .icon-bg-5:hover {
-    background-image: url(https://via.placeholder.com/715x628.png);
+    background-image: url(images/715x628.png);
 }
 .icon-bg-6:hover {
-    background-image: url(https://via.placeholder.com/715x628.png);
+    background-image: url(images/715x628.png);
 }
 .services-feature {
     background-color: #1A1A1A;
@@ -8560,13 +8559,13 @@ ul.style-default li:last-child, ol.style-default li:last-child {
 
 .banner-4 .ot-button .octf-btn {
   color: #fff;
-  background-color: #000;
+  background-color: #ffff;
   text-transform: uppercase;
   font-weight: bold;
 }
 .banner-4 .ot-button .octf-btn {
-  color: #fff;
-  background-color: #000;
+  color: #000;
+  background-color: #fff;
   text-transform: uppercase;
   font-weight: bold;
 }
@@ -8769,7 +8768,7 @@ ul.style-default li:last-child, ol.style-default li:last-child {
     padding-bottom: 85px;
 }
 .cta-bg-img {
-    background-image: url(https://via.placeholder.com/1920x1281.png);
+    background-image: url(/images/img-fixed.jpeg);
     background-position: center center;
     background-repeat: no-repeat;
     padding: 150px 0;
@@ -10166,7 +10165,7 @@ ul.style-default li:last-child, ol.style-default li:last-child {
 }
 
 .hero-btn{
-  background-color: #000;
+  background-color: #fff;
 }
 
 
@@ -10368,4 +10367,8 @@ ul.style-default li:last-child, ol.style-default li:last-child {
   }
 }
 
+
+.icon-main img{
+  width: 47px;
+}
 

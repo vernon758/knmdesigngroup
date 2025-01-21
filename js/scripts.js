@@ -781,3 +781,27 @@ closeButton.addEventListener('click', () => {
   chatBox.style.display = 'none';
 });
 
+
+
+
+const btn = document.querySelector('.octf-btn'); // Select the submit button using its class
+
+document.querySelector('form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the form from submitting normally
+
+    btn.textContent = 'Sending...'; // Change the button text to 'Sending...'
+
+    const serviceID = 'service_yp081ac'; // Your EmailJS service ID
+    const templateID = 'template_v7hdyzb'; // Your EmailJS template ID
+
+    // Use emailjs to send the form
+    emailjs.sendForm(serviceID, templateID, this)
+        .then(() => {
+            btn.textContent = 'Send Message'; // Reset the button text
+            this.reset(); // Reset the form fields
+            window.location.href = '/email-sent.html'; // Redirect to the thank-you page
+        }, (err) => {
+            btn.textContent = 'Send Message'; // Reset the button text in case of an error
+            alert(JSON.stringify(err)); // Alert the user in case of an error
+        });
+});

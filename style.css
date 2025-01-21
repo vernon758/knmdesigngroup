@@ -7021,7 +7021,7 @@ section {
   background-color: #1A1A1A;
 }
 .page-header {
-  background-image: url('https://via.placeholder.com/1920x500.png');
+  background-image: url(/images/image3-home5.png);
 }
 .page-header-contact {
   background-image: url('https://via.placeholder.com/1920x500.png');
@@ -7036,7 +7036,7 @@ section {
     background-image: url(https://via.placeholder.com/1920x500.png);
 }
 .pheader-about {
-    background-image: url(https://via.placeholder.com/1920x500.png);
+    background-image: url(/images/1929x500.png);
 }
 .pheader-process {
     background-image: url(https://via.placeholder.com/1920x500.png);

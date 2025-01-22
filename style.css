@@ -1549,7 +1549,7 @@ a:hover, a:active {
   left: 50%;
   opacity: 0;
   margin-left: -5px;
-  background: #fff;
+  background: #0f0f0f;
   content: "";
   display: block;
   transition: all 0.3s linear;
@@ -1586,7 +1586,7 @@ a:hover, a:active {
   text-align: center;
   text-transform: uppercase;
   outline: none;
-  color: #fff;
+  color: #0f0f0f;
   white-space: nowrap;
   overflow: hidden;
   -webkit-transition: all 0.2s ease-out 0s;
@@ -1634,7 +1634,7 @@ a:hover, a:active {
   left: 0;
   width: 0px;
   height: 1px;
-  background: #fff;
+  background: #0f0f0f;
   transition: all 0.3s linear;
   -webkit-transition: all 0.3s linear;
   -moz-transition: all 0.3s linear;
@@ -1657,7 +1657,7 @@ a:hover, a:active {
 .main-navigation ul ul li.current-menu-item > a,
 .main-navigation ul ul li.current-menu-ancestor > a {
   padding-left: 40px;
-  color: #fff;
+  color: #0f0f0f;
 }
 
 .main-navigation.no-line ul li li a:hover,
@@ -1823,13 +1823,13 @@ a:hover, a:active {
     transform: translateY(0);
   }
   .is-stuck .main-navigation ul.menu > li > a {
-    color: #fff;
+    color: #000000;
   }
   .is-stuck .main-navigation ul.menu > li > a:after {
-    color: #fff;
+    color: #000000;
   }
   .is-stuck .main-navigation ul.menu > li > a:before {
-    background: #fff;
+    background: #000000;
   }
   .is-stuck .cart-contents .count {
     background: #fff;
@@ -1995,7 +1995,7 @@ a:hover, a:active {
   }
   .vertical-main-navigation ul li li a:hover, .vertical-main-navigation ul li li.current-menu-item > a, .vertical-main-navigation ul li li.current-menu-ancestor > a {
     padding-left: 40px;
-    color: #fff;
+    color: #0f0f0f;
   }
   .vertical-main-navigation ul li ul {
     min-width: 250px;
@@ -2098,100 +2098,234 @@ a:hover, a:active {
     column-gap: 30px; /* Increased gap between columns */
   }
 
-  /* Left side - Menu toggle */
-  .header_mobile .left-side {
-    justify-self: start;
-    min-width: 40px; /* Ensures consistent space for menu toggle */
-  }
-
-  /* Center - Logo */
-  .header_mobile .mlogo_wrapper {
-    justify-self: center;
-    text-align: center;
-    padding: 0 15px;
-  }
-
-  .header_mobile .mlogo_wrapper img {
-    width: 100%;
-  }
-
-  /* Right side - Quote button */
-  .header_mobile .right-side {
-    justify-self: end;
-    min-width: max-content; /* Prevents button from shrinking */
-  }
-
-  /* Menu toggle button */
-  #mmenu-toggle {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-  }
-
-  #mmenu-toggle button {
-    background: none;
-    border: none;
-    padding: 0;
-    margin: 0;
-    color: #fff;
-  }
-
-  /* Button styles */
-  .octf-btn {
-    display: inline-block;
-    padding: 10px 20px;
-    color: #fff;
-    text-decoration: none;
-    font-size: 14px;
-    background: #2d8c3b;
-    border: 1px solid #fff;
-    transition: all 0.3s ease;
-    white-space: nowrap;
-  }
-
-  .octf-btn:hover {
-    background: #fff;
-    color: #000;
-  }
-
-  /* Responsive adjustments */
-  @media only screen and (max-width: 600px) {
-    .header_mobile .octf-mainbar-row {
-      padding: 10px 15px;
-      column-gap: 15px; /* Reduced gap for smaller screens but still maintaining spacing */
-    }
-
-    .octf-btn {
-      padding: 8px 15px;
-      font-size: 12px;
-    }
-
-    .header_mobile .mlogo_wrapper img {
-      height: 40px;
-    }
-
-    /* Ensure button stays visible and properly spaced */
-    .header_mobile .right-side {
-      padding-left: 10px;
-    }
-  }
-
-  /* Rest of the mobile menu styles */
-  .mmenu-wrapper {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 265px;
-    height: 100%;
+  .header_mobile.open, .header_mobile.is-stuck {
     background: #1a1a1a;
-    overflow: auto;
-    z-index: 999;
-    -webkit-transform: translateX(-100%);
-    transform: translateX(-100%);
-    transition: transform 0.3s ease;
+    -webkit-box-shadow: 4px 4px 30px 0px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 4px 4px 30px 0px rgba(0, 0, 0, 0.3);
+    box-shadow: 4px 4px 30px 0px rgba(0, 0, 0, 0.3);
+  }
+  
+  .header_mobile .mobile_nav .mobile_mainmenu li a {
+    color: #fff;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  }
+  .header_mobile .mobile_nav .mobile_mainmenu > li.menu-item-has-children .arrow i {
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  .header_mobile .mlogo_wrapper {
+    position: relative;
+  }
+  .header_mobile .mlogo_wrapper img {
+    height: 90px;
+  }
+
+  .header_mobile .mlogo_wrapper .mobile_logo {
+    float: left;
+  }
+
+
+  #mmenu_toggle {
+    position: absolute;
+    cursor: pointer;
+    width: 26px;
+    height: 20px;
+    right: 34px;
+    margin-top: -10px;
+    top: 50%;
+  }
+
+  #mmenu_toggle button {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin: -2px 0 0;
+    background: #fff;
+    height: 3px;
+    padding: 0;
+    border: none;
+    width: 100%;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    outline: none;
+    border-radius: 2px;
+  }
+
+  #mmenu_toggle button:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -8px;
+    width: 26px;
+    height: 3px;
+    background: #fff;
+    -webkit-transform-origin: 1.5px center;
+    transform-origin: 1.5px center;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    border-radius: 2px;
+  }
+
+  #mmenu_toggle button:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 26px;
+    height: 3px;
+    background: #fff;
+    -webkit-transform-origin: 1.5px center;
+    transform-origin: 1.5px center;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    border-radius: 2px;
+  }
+
+  #mmenu_toggle.active button {
+    background: none;
+  }
+
+  
+  #mmenu_toggle.active button:before {
+    top: 0;
+    -webkit-transform: rotate3d(0, 0, 1, -45deg);
+    transform: rotate3d(0, 0, 1, -45deg);
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+  }
+
+  #mmenu_toggle.active button:after {
+    bottom: 0;
+    -webkit-transform: rotate3d(0, 0, 1, 45deg);
+    transform: rotate3d(0, 0, 1, 45deg);
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+  }
+
+  .mobile_nav {
+    display: none;
+    margin-top: 20px;
+  }
+
+  .mobile_nav .mobile_mainmenu {
+    font-family: "Titillium Web", sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  .mobile_nav .mobile_mainmenu ul {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    margin-left: 15px;
+  }
+
+  .mobile_nav .mobile_mainmenu ul {
+    display: none;
+  }
+
+  .mobile_nav .mobile_mainmenu li {
+    position: relative;
+    list-style: none;
+  }
+
+  .mobile_nav .mobile_mainmenu li a {
+    padding: 9px 0;
+    display: block;
+    font-size: 16px;
+  }
+
+  .mobile_nav .mobile_mainmenu > li > a {
+    text-transform: uppercase;
+    font-size: 14px;
+  }
+
+  .mobile_nav .mobile_mainmenu > li:last-child > a {
+    border: none;
+  }
+
+  .mobile_nav .mobile_mainmenu > li.menu-item-has-children .arrow {
+    color: #fff;
+    position: absolute;
+    display: block;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+    width: 40px;
+    height: auto;
+    padding: 9px 12px 9px 0;
+    line-height: inherit;
+    text-align: right;
+    box-sizing: border-box;
+  }
+
+  .mobile_nav .mobile_mainmenu > li.menu-item-has-children .arrow i {
+    color: #9397a7;
+    display: inline-block;
+    line-height: 1;
+    -webkit-transition: transform 0.3s ease-in-out;
+    -moz-transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .mobile_nav .mobile_mainmenu > li.menu-item-has-children .arrow i:before {
+    font-size: 10px;
+    font-weight: 600;
+  }
+
+  .mobile_nav .mobile_mainmenu > li.menu-item-has-children .arrow.active i {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    transform: rotate(90deg);
+  }
+
+  .mobile_nav ul li a:before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 0;
+    width: 30px;
+    height: 1px;
+    background: #fff;
+    transition: all 0.3s linear;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    -ms-transition: all 0.3s linear;
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  .mobile_nav ul li > a:hover:before {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .mobile_nav ul li a:hover {
+    padding-left: 40px;
   }
 }
+@media only screen and (max-width: 767px) {
+  .mlogo_wrapper {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .mobile_logo img {
+    max-width: 230px;
+    max-height: 47px;
+  }
+}
+/*---
 /*--------------------------------------------------------------
 ## Page Header
 --------------------------------------------------------------*/
@@ -3188,7 +3322,7 @@ a:hover, a:active {
   color: #a3a3a3;
 }
 .widget-area .widget_nav_menu ul li.current-menu-item a {
-  color: #fff;
+  color: #0f0f0f;
   background: #1a1a1a;
 }
 
@@ -8262,14 +8396,14 @@ ul.style-default li:last-child, ol.style-default li:last-child {
 }
 /* Top header */
 .top-header {
-    background-color: #0A0A0A;
+    background-color: #ffff;
     background-image: url(https://via.placeholder.com/1920x130.png);
     background-position: center center;
     background-repeat: no-repeat;
     padding: 33px 0;
 }
 .top-info h6 {
-    color: #FFF;
+    color: #000;
     font-size: 16px;
     margin-bottom: 0;
     line-height: 28px;
@@ -8277,7 +8411,7 @@ ul.style-default li:last-child, ol.style-default li:last-child {
     font-weight: 400;
 }
 .top-info p {
-    color: #C4C4C4;
+    color: #222328;
     font-family: "Titillium Web",sans-serif;
     font-weight: 400;
     margin-bottom: 0;
@@ -8286,7 +8420,7 @@ ul.style-default li:last-child, ol.style-default li:last-child {
     height: 65px;
 }
 .main-header-s2 {
-    background-color: #1A1A1A;
+    background-color: #ffff;
     position: relative;
 }
 .main-header-s2.is-stuck {

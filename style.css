@@ -8648,6 +8648,7 @@ ul.style-default li:last-child, ol.style-default li:last-child {
     margin: 0 auto;
 }
 
+
 .banner-4 {
   position: relative;
   padding: 0;
@@ -8656,9 +8657,16 @@ ul.style-default li:last-child, ol.style-default li:last-child {
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  background: url('main.mp4') no-repeat center center;
-  background-size: cover;
-  background-attachment: fixed;
+}
+
+.banner-4 video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2; /* Send video to the back */
 }
 
 .banner-4::before {
@@ -8668,7 +8676,7 @@ ul.style-default li:last-child, ol.style-default li:last-child {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(255, 255, 255, 0.7); /* White overlay with transparency */
+  background-color: /* rgba(255, 255, 255, 0.7); White overlay with transparency */
   z-index: -1; /* Layer the overlay above the video but behind content */
 }
 
@@ -8680,9 +8688,15 @@ ul.style-default li:last-child, ol.style-default li:last-child {
 .banner-4 h2 {
   font-size: 4.5rem;
   margin-bottom: 20px;
-  color: #fff;
+  color: #fff; /* Darker text for contrast */
 }
 
+.banner-4 .ot-button .octf-btn {
+  color: #fff;
+  background-color: #ffff;
+  text-transform: uppercase;
+  font-weight: bold;
+}
 .banner-4 .ot-button .octf-btn {
   color: #000;
   background-color: #fff;
@@ -8691,43 +8705,41 @@ ul.style-default li:last-child, ol.style-default li:last-child {
 }
 
 .video-popup.s-dark .btn-play {
-  color: #FFF;
-  background: #1A1A1A;
+    color: #FFF;
+    background: #1A1A1A;
 }
-
 .video-popup.s-dark .btn-play:before {
-  background: #1A1A1A;
+    background: #1A1A1A;
 }
-
 .banner-desc-4 {
-  position: absolute;
-  left: -63%;
-  width: auto;
-  top: 62%;
+    position: absolute;
+    left: -63%;
+    width: auto;
+    top: 62%;
 }
-
 .banner-desc-4 p {
-  position: relative;
-  display: block;
-  color: #1a1a1a;
-  font-family: "Titillium Web", sans-serif;
-  font-size: 14.02px;
-  line-height: 18.03px;
-  text-transform: uppercase;
-  letter-spacing: 0.75px;
-  transform: rotate(270deg);
-  margin-bottom: 0;
+    position: relative;
+    display: block;
+    color: #1a1a1a;
+    font-family: "Titillium Web",sans-serif;
+    font-size: 14.02px;
+    line-height: 18.03px;
+    text-transform: uppercase;
+    letter-spacing: .75px;
+    -webkit-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    transform: rotate(270deg);
+    margin-bottom: 0;
 }
-
 .banner-desc-4 p:after {
-  position: absolute;
-  content: "";
-  height: 1px;
-  width: 90px;
-  left: calc(100% + 12px);
-  top: 50%;
-  background: #1a1a1a;
-  animation: MoveUpRight 1.5s linear infinite;
+    position: absolute;
+    content: "";
+    height: 1px;
+    width: 90px;
+    left: calc(100% + 12px);
+    top: 50%;
+    background: #1a1a1a;
+    animation: MoveUpRight 1.5s linear infinite;
 }
 .feature-4 {
     background-image: url(images/hero-img2.jpg);

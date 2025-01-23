@@ -8656,7 +8656,7 @@ ul.style-default li:last-child, ol.style-default li:last-child {
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  background: url('main.mp4') no-repeat center center;
+  background: url('/main.mp4') no-repeat center center;
   background-size: cover;
   background-attachment: fixed;
 }
